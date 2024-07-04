@@ -1,0 +1,78 @@
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { provideIcons } from '@ng-icons/core';
+import { lucideMenu, lucideX } from '@ng-icons/lucide';
+import { BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/ui-sheet-brain';
+import { HlmSheetImports } from '../_ui/ui-sheet-helm/src';
+import { HlmButtonDirective } from '../_ui/ui-button-helm/src';
+import { HlmIconComponent } from '../_ui/ui-icon-helm/src';
+import { SideNavContentComponent } from '../layout/side-nav/side-nav-content.component';
+import { HlmScrollAreaComponent } from '../_ui/ui-scrollarea-helm/src';
+import { NavLinkDirective } from '../../spartan-nav-link.directive';
+import { SideNavLinkDirective } from '../layout/side-nav/side-nav-link.directive';
+import { SpartanLogoComponent } from '../../spartan-logo.component';
+// import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+// import { HlmIconComponent, provideIcons } from '../../../ui-icon-helm/src';
+// import { HlmScrollAreaComponent } from '@spartan-ng/ui-scrollarea-helm';
+// import { BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/ui-sheet-brain';
+// import { HlmSheetImports } from '@spartan-ng/ui-sheet-helm';
+// import { SideNavContentComponent } from '../layout/side-nav/side-nav-content.component';
+// import { SideNavLinkDirective } from '../layout/side-nav/side-nav-link.directive';
+// import { SpartanLogoComponent } from '../spartan-logo.component';
+// import { NavLinkDirective } from '../spartan-nav-link.directive';
+
+@Component({
+  selector: 'spartan-mobile-nav',
+  standalone: true,
+  imports: [
+    BrnSheetTriggerDirective,
+    BrnSheetContentDirective,
+    HlmSheetImports,
+
+    HlmButtonDirective,
+    HlmIconComponent,
+    SideNavContentComponent,
+    HlmScrollAreaComponent,
+    RouterLink,
+    NavLinkDirective,
+    SideNavLinkDirective,
+    SpartanLogoComponent,
+  ],
+  providers: [provideIcons({ lucideMenu, lucideX })],
+  template: `
+		<hlm-sheet side="left" closeDelay="100">
+			<button size="sm" id="menu-trigger" variant="ghost" brnSheetTrigger hlmBtn>
+				<hlm-icon name="lucideMenu" size="sm" />
+				<span class="sr-only">Open menu</span>
+			</button>
+			<hlm-sheet-content class="pb-0 pr-0" *brnSheetContent="let ctx">
+				<button hlmSheetClose>
+					<span class="sr-only">Close</span>
+					<hlm-icon class="flex w-4 h-4" name="lucideX" />
+				</button>
+				<div class="flex items-center pb-2">
+					<a (click)="ctx.close()" hlmBtn variant="ghost" class="mr-4 p-1.5" routerLink="/">
+						<spartan-logo class="w-12 text-primary" />
+					</a>
+					<span>spartan/ui</span>
+				</div>
+				<hlm-scroll-area class="h-[calc(100vh-8rem)]">
+					<div class="flex flex-col p-2 pb-4 space-y-1">
+						<a (click)="ctx.close()" class="px-2 py-1 text-foreground hover:underline" routerLink="/documentation">
+							Documentation
+						</a>
+						<a (click)="ctx.close()" class="px-2 py-1 text-foreground hover:underline" routerLink="/stack">Stack</a>
+						<a (click)="ctx.close()" class="px-2 py-1 text-foreground hover:underline" routerLink="/components">
+							Components
+						</a>
+						<a (click)="ctx.close()" class="px-2 py-1 text-foreground hover:underline" routerLink="/examples">
+							Examples
+						</a>
+					</div>
+					<spartan-side-nav-content (linkClicked)="ctx.close()" />
+				</hlm-scroll-area>
+			</hlm-sheet-content>
+		</hlm-sheet>
+	`,
+})
+export class HeaderMobileNavComponent { }
