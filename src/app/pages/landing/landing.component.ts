@@ -8,25 +8,6 @@ import { HlmBadgeDirective } from '../../shared/components/_ui/ui-badge-helm/src
 import { HlmCardContentDirective, HlmCardDescriptionDirective, HlmCardDirective, HlmCardHeaderDirective, HlmCardTitleDirective } from '../../shared/components/_ui/ui-card-helm/src';
 import { HlmIconComponent } from '../../shared/components/_ui/ui-icon-helm/src';
 import { HeaderComponent } from '../../shared/components/header/header.component';
-// import { HlmBadgeDirective } from '@spartan-ng/ui-badge-helm';
-// import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
-// import {
-//   HlmCardContentDirective,
-//   HlmCardDescriptionDirective,
-//   HlmCardDirective,
-//   HlmCardHeaderDirective,
-//   HlmCardTitleDirective,
-// } from '@spartan-ng/ui-card-helm';
-// import { HlmIconComponent } from '@spartan-ng/ui-icon-helm';
-// import { metaWith } from '../shared/meta/meta.util';
-
-// export const routeMeta: RouteMeta = {
-//   meta: metaWith(
-//     'spartan - Cutting-edge tools powering Angular full-stack development',
-//     'Build next-level, full-stack applications with AnalogJs and the spartan/stack. Make them accessible and look incredible with spartan/ui.',
-//   ),
-//   title: 'spartan - Cutting-edge tools powering Angular full-stack development',
-// };
 
 const container = 'mx-auto flex flex-col items-center gap-4 text-center';
 const subHeading = 'font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl';
@@ -80,7 +61,7 @@ const lead = 'leading-normal text-muted-foreground sm:text-xl sm:leading-8';
 						variant="outline"
 						target="_blank"
 						rel="noreferrer"
-						href="https://github.com/goetzrobin/spartan"
+						href="https://github.com/MarloneA/groove"
 					>
 						Check it out on github.
 						<hlm-icon class="w-4 h-4 ml-2" name="lucideStar" />

@@ -30,29 +30,24 @@ import { HlmCardDirective } from '../../shared/components/_ui/ui-card-helm/src';
       <div class="bg-muted relative hidden h-full flex-col border-r p-10 text-white lg:flex dark:border-r-zinc-800">
         <div class="absolute inset-0 bg-zinc-900"></div>
         <div class="relative z-20 flex items-center text-lg font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="mr-2 h-6 w-6"
-          >
-            <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="480" height="480" viewBox="0 0 172 172" style="fill:#26e07f;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#1fb141">
+                <path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"></path>
+              </g>
+            </g>
           </svg>
           <a href="/">
-            Acme Inc
+            Groove Inc
           </a>
         </div>
         <div class="relative z-20 mt-auto">
           <blockquote class="space-y-2">
             <p class="text-lg">
-              “This library has saved me countless hours of work and helped me deliver stunning designs to my clients
-              faster than ever before.”
+              "One good thing about music, when it hits you feel no pain”
             </p>
-            <footer class="text-sm">Sofia Davis</footer>
+            <footer class="text-sm">Bob Marley</footer>
           </blockquote>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { HlmMenuBarComponent, HlmMenuBarItemDirective, HlmMenuComponent, HlmMenu
 import { HlmButtonDirective } from '../../../shared/components/_ui/ui-button-helm/src';
 import { HlmIconComponent } from '../../../shared/components/_ui/ui-icon-helm/src';
 import { BrnMenuTriggerDirective } from '@spartan-ng/ui-menu-brain';
+import { SpartanLogoComponent } from '../../../shared/spartan-logo.component';
 // import { BrnMenuTriggerDirective } from '@spartan-ng/ui-menu-brain';
 
 @Component({
@@ -36,10 +37,14 @@ import { BrnMenuTriggerDirective } from '@spartan-ng/ui-menu-brain';
     HlmMenuItemRadioDirective,
 
     HlmIconComponent,
+    SpartanLogoComponent
   ],
   providers: [provideIcons({ lucideMic2, lucideGlobe })],
   template: `
 		<hlm-menu-bar class="w-fill border-0">
+      <a href="/">
+        <spartan-logo class="w-8 pl-1" />
+      </a>
 			<button hlmMenuBarItem [brnMenuTriggerFor]="music" class="px-3 font-bold">Music</button>
 			<button hlmMenuBarItem [brnMenuTriggerFor]="file" class="px-3 font-medium">File</button>
 			<button hlmMenuBarItem [brnMenuTriggerFor]="edit" class="px-3 font-medium">Edit</button>
